@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    /* styles */
+    </style>
+</head>
+<body class="bg-lime-400">
+ 
+    <!-- input section -->
+    <div class="container flex flex-col justify-center items-center gap-8 min-h-screen">
+        <h1 class="text-white text-4xl font-black text-center">Local Storage Practice</h1>
+
+        <div class=" p-5 flex flex-col justify-center items-center gap-4">
+            <div class="bg-green-100 flex items-center gap-4 p-3 rounded-lg">
+                <label for="name" class="text-base text-gray-700">Name</label>
+                <input type="text" class="w-50 p-2" placeholder="Name" id="name">
+                
+                <label for="id" class="text-base text-gray-700">ID</label>
+                <input type="text" class="w-50 p-2" placeholder="ID" id="id">
+
+                <label for="occupation" class="text-base ">Occupation</label>
+                <input type="text" class="w-50 p-2" placeholder="Occupation" id="occupation">
+
+                <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" id="submit" onclick="getData()">Submit</button>
+
+            </dv>
+        </div>
+
+        <!--dashboard -->
+        
+        <!-- deshboard head -->
+        <ul class="bg-red-50 mt-6 rounded-lg flex items-center gap-4 p-3 hidden" id="dashboard-header">
+            <li class="text-gray-700 w-80 text-center py-2">Name</li>
+            <li class="text-gray-700 w-80 text-center py-2">ID</li>
+            <li class="text-gray-700 w-80 text-center py-2">Occupation</li>
+
+            <li class="text-gray-700 text-center">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mx-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                  </svg>
+                  
+                
+          </li>
+        </ul>
+        
+        <!-- dash board data-->
+        <div class="bg-red-50 rounded-lg" id="dashboard">
+           
+            <!-- data example -->
+            <!-- <ul class="flex items-center gap-4 p-3">
+                <li class="text-gray-700 w-80 text-center py-2">Name</li>
+                <li class="text-gray-700 w-80 text-center py-2">ID</li>
+                <li class="text-gray-700 w-80 text-center py-2">Occupation</li>
+                <li class="text-red-700 text-center cursor-pointer">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-red-700">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      
+                </li>
+            </ul> -->
+           
+        </div>
+    
+        <!-- container end -->
+        <button class="bg-red-500 hover:bg-red-700 text-white font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded justify-self-end mt-16 hidden" id="delete-all">Delete All</button>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
